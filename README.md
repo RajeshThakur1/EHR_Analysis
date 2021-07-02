@@ -37,3 +37,11 @@ dvc add data_given/*.csv
 ```buildoutcfg
 git add .
 ```
+```buildoutcfg
+git commit -m "first commit"
+```
+```buildoutcfg
+git add . && git commit -m "updated README.md"
+```
+
+
