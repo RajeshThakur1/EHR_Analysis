@@ -1,0 +1,35 @@
+base:
+  project: EHR_Analysis
+  random_state: 42
+  target_col: DMIndicator
+
+data_source:
+    s3_bucket_patient: data/raw/patient.csv
+    s3_bucket_diagnosis: data/raw/diagnosis.csv
+    s3_bucket_medication: data/raw/medication.csv
+    s3_bucket_phy_sp: data/raw/phy_sp.csv
+    s3_bucket_transcript: data/raw/transcript.csv
+
+load_data:
+  patient: data/raw/patient.csv
+  diagnosis : data/raw/diagnosis.csv
+  medication: data/raw/medication.csv
+  phy_sp : data/raw/phy_sp.csv
+  transcript: data/raw/transcript.csv
+
+split_data:
+  train_path : data/processed/train_data.csv
+  test_path: data/processed/test_data.csv
+  test_size: 0.2
+
+estimators:
+  ElasticNet:
+    params:
+      alpha: 0.88
+      l1_ratio: 0.89
+
+model_dir: saved_model
+
+
+
+
