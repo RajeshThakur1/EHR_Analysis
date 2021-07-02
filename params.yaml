@@ -28,7 +28,7 @@ estimators:
       alpha: 0.88
       l1_ratio: 0.89
 
-model_dir: saved_model1
+model_dir: saved_model
 
 
 
