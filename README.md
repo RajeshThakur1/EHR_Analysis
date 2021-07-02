@@ -21,27 +21,40 @@ transcript = pd.read_csv('https://raw.githubusercontent.com/kthouz/Diabetes-Prac
 
 bash
 
-```buildoutcfg
+```bash
 git init
 ```
-```buildoutcfg
+```bash
 dvc init
 ```
 
-```buildoutcfg
+```bash
 dvc add data_given/*.csv
 ```
-```buildoutcfg
+```bash
 dvc add data_given/*.csv
 ```
-```buildoutcfg
+```bash
 git add .
 ```
-```buildoutcfg
+```bash
 git commit -m "first commit"
 ```
-```buildoutcfg
+```bash
 git add . && git commit -m "updated README.md"
 ```
+<p> How to push the code in gitHub</p>
+```buildoutcfg
+git remote add origin https://github.com/RajeshThakur1/EHR_Analysis.git
+```
+<p> Rename your Current branch main</p>
 
+```bash
+git branch -M main
+```
+<p> Now push your Entire code to the main branch</p>
+
+```bash
+git push -u origin main
+```
 
