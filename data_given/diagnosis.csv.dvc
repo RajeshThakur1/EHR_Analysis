@@ -1,0 +1,4 @@
+outs:
+- md5: 51120fa16b0712e0dcd338764c6b5e01
+  size: 1444495
+  path: diagnosis.csv
