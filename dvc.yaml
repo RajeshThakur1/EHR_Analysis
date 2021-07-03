@@ -1,0 +1,17 @@
+stages:
+  load_data:
+    cmd: python src/load_data.py --config=params.yaml
+    deps:
+      - src/get_data.py
+      - src/load_data.py
+      - data_given/patient.csv
+      - data_given/diagnosis.csv
+      - data_given/medication.csv
+      - data_given/phy_sp.csv
+      - data_given/transcript.csv
+    outs:
+      - data/raw/patient.csv
+      - data/raw/diagnosis.csv
+      - data/raw/medication.csv
+      - data/raw/phy_sp.csv
+      - data/raw/transcript.csv

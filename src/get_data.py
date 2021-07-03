@@ -22,7 +22,8 @@ def get_data(config_path):
     phy_df = pd.read_csv(phy_raw_datapath, sep=',', encoding='utf-8')
     transcript_raw_datapath = config['data_source']["s3_bucket_transcript"]
     transcript_df = pd.read_csv(transcript_raw_datapath, sep=',', encoding='utf-8')
-    print(patient_df.head())
+    #print(patient_df.head())
+    #extra comments
     return patient_df,dignosis_df,medication_df,phy_df,transcript_df
 
 

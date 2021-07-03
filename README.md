@@ -58,3 +58,11 @@ git branch -M main
 git push -u origin main
 ```
 
+<p>In order to reproduce the all stages from dvc.yaml file excute the below command</p>
+
+```bash
+dvc repro
+```
+
+
+
