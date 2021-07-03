@@ -63,6 +63,16 @@ git push -u origin main
 ```bash
 dvc repro
 ```
+<p> In order to track that how your model is behaving use below command</p>
 
+```bash
+ dvc metrics show
+```
+
+<p>To check the difference of the performance of the model</p>
+
+```bash
+dvc metrics diff
+```
 
 

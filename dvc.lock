@@ -72,3 +72,29 @@ stages:
     - path: data/processed/concatenated.csv
       md5: 06ea4f8f11038091badb84dbb4e0be57
       size: 1337627
+  train_and_evaluate:
+    cmd: python src/train_and_evaluate.py --config=params.yaml
+    deps:
+    - path: data/processed/test_data.csv
+      md5: f3afb7681f08aafd44f046e3a07c2f48
+      size: 267786
+    - path: data/processed/train_data.csv
+      md5: e5c3c5ccc1553746ca4362deec8ebad2
+      size: 1070101
+    - path: src/train_and_evaluate.py
+      md5: 1a914c2c26b2b99b5441a83cf1396044
+      size: 2525
+    params:
+      params.yaml:
+        estimators.DecisionTreeClassifier.params.criterion: gini
+        estimators.DecisionTreeClassifier.params.max_depth: 1
+    outs:
+    - path: report/params.json
+      md5: 6d24740163a6c9e6c468e3d3d0e1f8c2
+      size: 47
+    - path: report/scores.json
+      md5: 2aff5624b446aeffda8a4b63fbfe3d44
+      size: 60
+    - path: saved_model/model.joblib
+      md5: 5567083942ccdcd3245688cac86f9b57
+      size: 1583
