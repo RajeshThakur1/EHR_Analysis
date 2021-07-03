@@ -4,11 +4,11 @@ base:
   target_col: DMIndicator
 
 data_source:
-    s3_bucket_patient: data/raw/patient.csv
-    s3_bucket_diagnosis: data/raw/diagnosis.csv
-    s3_bucket_medication: data/raw/medication.csv
-    s3_bucket_phy_sp: data/raw/phy_sp.csv
-    s3_bucket_transcript: data/raw/transcript.csv
+    s3_bucket_patient: data_given/patient.csv
+    s3_bucket_diagnosis: data_given/diagnosis.csv
+    s3_bucket_medication: data_given/medication.csv
+    s3_bucket_phy_sp: data_given/phy_sp.csv
+    s3_bucket_transcript: data_given/transcript.csv
 
 load_data:
   patient: data/raw/patient.csv
