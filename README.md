@@ -81,3 +81,20 @@ dvc metrics diff
 ```bash
  python setup.py sdist bdist_wheel
 ```
+tox command
+```bash
+tox
+```
+for rebuilding
+```bash
+tox -r
+```
+pytest
+```bash
+pytest -c
+```
+
+setup command
+```bash
+pip install -e .
+```
