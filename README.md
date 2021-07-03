@@ -76,4 +76,8 @@ dvc metrics diff
 ```
 <p> for testing are using tox am</p>
 
+<p>create your own library</p>
 
+```bash
+ python setup.py sdist bdist_wheel
+```

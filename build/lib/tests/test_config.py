@@ -1,5 +1,5 @@
 
 def test_genaric():
-    a = 3
+    a =2
     b = 3
     assert a == b
