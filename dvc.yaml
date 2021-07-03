@@ -15,3 +15,24 @@ stages:
       - data/raw/medication.csv
       - data/raw/phy_sp.csv
       - data/raw/transcript.csv
+
+  split_data:
+    cmd: python src/split_data.py --config=params.yaml
+    deps:
+      - src/split_data.py
+      - data/raw/patient.csv
+      - data/raw/diagnosis.csv
+      - data/raw/medication.csv
+      - data/raw/phy_sp.csv
+      - data/raw/transcript.csv
+    outs:
+      - data/processed/patient_train_data.csv
+      - data/processed/patient_test_data.csv
+      - data/processed/diagnosis_train_data.csv
+      - data/processed/diagnosis_test_data.csv
+      - data/processed/medication_train_data.csv
+      - data/processed/medication_test_data.csv
+      - data/processed/phy_sp_train_data.csv
+      - data/processed/phy_sp_test_data.csv
+      - data/processed/transcript_train_data.csv
+      - data/processed/transcript_test_data.csv

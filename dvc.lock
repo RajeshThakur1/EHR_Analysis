@@ -40,3 +40,55 @@ stages:
     - path: data/raw/transcript.csv
       md5: fbb101c9c6b371909100e91a1d4b4d10
       size: 3784056
+  split_data:
+    cmd: python src/split_data.py --config=params.yaml
+    deps:
+    - path: data/raw/diagnosis.csv
+      md5: 0c699129e171f6eb910816e459610108
+      size: 989548
+    - path: data/raw/medication.csv
+      md5: 376d9486ccb351afb4dbb6cb57e730ab
+      size: 41124903
+    - path: data/raw/patient.csv
+      md5: 99af8214dd646b65d633dda07e081b6f
+      size: 464404
+    - path: data/raw/phy_sp.csv
+      md5: 158096f4b59a05cd6f72b38494b53169
+      size: 1587812
+    - path: data/raw/transcript.csv
+      md5: fbb101c9c6b371909100e91a1d4b4d10
+      size: 3784056
+    - path: src/split_data.py
+      md5: d064b5a90adc14b97f7d2e123f2ac5c6
+      size: 3502
+    outs:
+    - path: data/processed/diagnosis_test_data.csv
+      md5: 95d96cdb1e2abbbfdf235d850cba9f55
+      size: 197102
+    - path: data/processed/diagnosis_train_data.csv
+      md5: 19a35a61d945f544b89205d132a1d660
+      size: 784452
+    - path: data/processed/medication_test_data.csv
+      md5: 38a0581eecd55cd4433077f910ccbef3
+      size: 8227703
+    - path: data/processed/medication_train_data.csv
+      md5: 5738a4dcac6984134cdd9b9e1a0e8626
+      size: 32868519
+    - path: data/processed/patient_test_data.csv
+      md5: 949c4122a12f85b9465abbcff55d51a0
+      size: 92945
+    - path: data/processed/patient_train_data.csv
+      md5: 7ffed8c525b454420a74a3a04bfa6f9f
+      size: 371500
+    - path: data/processed/phy_sp_test_data.csv
+      md5: 9c695ed6e28c39c8a54b2c955f5f5ee4
+      size: 318832
+    - path: data/processed/phy_sp_train_data.csv
+      md5: 4b5d549b4928207d6c6959e31f9d91eb
+      size: 1270470
+    - path: data/processed/transcript_test_data.csv
+      md5: 5d686806538619bc52655151002b087f
+      size: 741546
+    - path: data/processed/transcript_train_data.csv
+      md5: 72fef9fb9750b9ca903e846b0a561395
+      size: 2964102

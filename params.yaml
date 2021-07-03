@@ -18,8 +18,16 @@ load_data:
   transcript: data/raw/transcript.csv
 
 split_data:
-  train_path : data/processed/train_data.csv
-  test_path: data/processed/test_data.csv
+  patient_train_path : data/processed/patient_train_data.csv
+  patient_test_path: data/processed/patient_test_data.csv
+  diagnosis_train_path: data/processed/diagnosis_train_data.csv
+  diagnosis_test_path: data/processed/diagnosis_test_data.csv
+  medication_train_path: data/processed/medication_train_data.csv
+  medication_test_path: data/processed/medication_test_data.csv
+  phy_sp_train_path: data/processed/phy_sp_train_data.csv
+  phy_sp_test_path: data/processed/phy_sp_test_data.csv
+  transcript_train_path: data/processed/transcript_train_data.csv
+  transcript_test_path: data/processed/transcript_test_data.csv
   test_size: 0.2
 
 estimators:
