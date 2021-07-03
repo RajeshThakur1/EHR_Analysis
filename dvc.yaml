@@ -16,23 +16,21 @@ stages:
       - data/raw/phy_sp.csv
       - data/raw/transcript.csv
 
+  data_getter:
+    cmd: python src/data_getter.py --config=params.yaml
+    deps:
+      - src/data_getter.py
+      - data/raw/patient.csv
+      - data/raw/transcript.csv
+    outs:
+      - data/processed/concatenated.csv
+
+
   split_data:
     cmd: python src/split_data.py --config=params.yaml
     deps:
       - src/split_data.py
-      - data/raw/patient.csv
-      - data/raw/diagnosis.csv
-      - data/raw/medication.csv
-      - data/raw/phy_sp.csv
-      - data/raw/transcript.csv
+      - src/data_getter.py
     outs:
-      - data/processed/patient_train_data.csv
-      - data/processed/patient_test_data.csv
-      - data/processed/diagnosis_train_data.csv
-      - data/processed/diagnosis_test_data.csv
-      - data/processed/medication_train_data.csv
-      - data/processed/medication_test_data.csv
-      - data/processed/phy_sp_train_data.csv
-      - data/processed/phy_sp_test_data.csv
-      - data/processed/transcript_train_data.csv
-      - data/processed/transcript_test_data.csv
+      - data/processed/train_data.csv
+      - data/processed/test_data.csv
