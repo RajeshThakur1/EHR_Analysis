@@ -1,0 +1,43 @@
+base:
+  project: EHR_Analysis
+  random_state: 42
+  target_col: DMIndicator
+
+data_source:
+    s3_bucket_patient: data_given/patient.csv
+    s3_bucket_diagnosis: data_given/diagnosis.csv
+    s3_bucket_medication: data_given/medication.csv
+    s3_bucket_phy_sp: data_given/phy_sp.csv
+    s3_bucket_transcript: data_given/transcript.csv
+
+load_data:
+  patient: data/raw/patient.csv
+  diagnosis : data/raw/diagnosis.csv
+  medication: data/raw/medication.csv
+  phy_sp : data/raw/phy_sp.csv
+  transcript: data/raw/transcript.csv
+
+
+split_data:
+  train_path : data/processed/train_data.csv
+  test_path: data/processed/test_data.csv
+  concatenated_df: data/processed/concatenated.csv
+
+  test_size: 0.2
+
+estimators:
+  DecisionTreeClassifier:
+    params:
+      max_depth: 1
+      criterion: gini
+
+model_dir: saved_model
+
+reports:
+  params: report/params.json
+  scores: report/scores.json
+
+webapp_model_dir: prediction_service/model/model.joblib
+
+
+

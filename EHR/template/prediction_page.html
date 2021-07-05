@@ -1,0 +1,117 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+
+<div name="home" class="parallax first-section wow fadeIn" data-stellar-background-ratio="0.4" >
+
+  <div class="container services wow fadeIn animated">
+    <div class="row">
+        <div class="col-lg-12 col-md-4 col-sm-6 col-xs-12">
+          <div class="appointment-form">
+            {% if response %}
+            <h3>Your Prediction Result = {{response}} </h3>
+            {% else %}
+            <h3><span>+</span> Please fill your form</h3>
+            {% endif %}
+            <div class="form">
+                <form action="" method="post">
+                  {% csrf_token %}
+                  <fieldset>
+                      <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                          <div class="form-group">
+                            <input type="number" required name="Age" placeholder="Your Age">
+                          </div>
+                      </div>
+                      <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                          <div class="form-group">
+                            <input type="text" required name="Gender" placeholder="Your Gender">
+                          </div>
+                      </div>
+                      <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                          <div class="form-group">
+                            <input type="text" required name="RespiratoryRate_Max" placeholder="Your RespiratoryRate_Max">
+                          </div>
+                      </div>
+                      <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                          <div class="form-group">
+                            <input type="text" required name="Temperature_Max" placeholder="Your Temperature_Max">
+                          </div>
+                      </div>
+                      <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                          <div class="form-group">
+                            <input type="text" required name="RespiratoryRate_Min" placeholder="Your RespiratoryRate_Min">
+                          </div>
+                      </div>
+                      <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                          <div class="form-group">
+                            <input type="text" required name="DiastolicBP_Std" placeholder="Your DiastolicBP_Std">
+                          </div>
+                      </div>
+                      <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                          <div class="form-group">
+                            <input type="text" required name="BMI_Mean" placeholder="Your BMI_Mean">
+                          </div>
+                      </div>
+                      <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                          <div class="form-group">
+                            <input type="text" required name="RespiratoryRate_Mean" placeholder="Your RespiratoryRate_Mean">
+                          </div>
+                      </div>
+                      <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                          <div class="form-group">
+                            <input type="text" required name="Temperature_Mean" placeholder="Your Temperature_Mean">
+                          </div>
+                      </div>
+                      <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                          <div class="form-group">
+                            <input type="text" required name="BMI_Change" placeholder="Your BMI_Change">
+                          </div>
+                      </div>
+                      <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                          <div class="form-group">
+                            <input type="text" required name="DiastolicBP_Change" placeholder="Your DiastolicBP_Change">
+                          </div>
+                      </div>
+                      <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                          <div class="form-group">
+                            <input type="text" required name="Height_Change" placeholder="Your Height_Change">
+                          </div>
+                      </div>
+                      <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                          <div class="form-group">
+                            <input type="text" required name="RespiratoryRate_Change" placeholder="Your RespiratoryRate_Change">
+                          </div>
+                      </div>
+                      <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                          <div class="form-group">
+                            <input type="text" required name="SystolicBP_Change" placeholder="Your SystolicBP_Change">
+                          </div>
+                      </div>
+                      <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                          <div class="form-group">
+                            <input type="text" name="Temperature_Change" placeholder="Your Temperature_Change">
+                          </div>
+                      </div>
+                      <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                          <div class="form-group">
+                            <input type="text" name="Weight_Change" placeholder="Your Weight_Change">
+                          </div>
+                      </div>
+                      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <div class="row">
+                            <div class="form-group">
+                              <div class="center"><button type="submit">Submit</button></div>
+                            </div>
+                        </div>
+                      </div>
+                  </fieldset>
+                </form>
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+{% endblock %}

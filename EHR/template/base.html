@@ -16,19 +16,19 @@
    <link rel="shortcut icon" href="/static/images/fevicon.ico.png" type="image/x-icon" />
    <link rel="apple-touch-icon" href="/static/images/apple-touch-icon.png">
    <!-- Bootstrap CSS -->
-   <link rel="stylesheet" href="./static/css/bootstrap.min.css">
+   <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
    <!-- Site CSS -->
-   <link rel="stylesheet" href="./static/style.css">
+   <link rel="stylesheet" href="./static/style.css' %}">
    <!-- Colors CSS -->
-   <link rel="stylesheet" href="./static/css/colors.css">
+   <link rel="stylesheet" href="{% static 'css/colors.css' %}">
    <!-- ALL VERSION CSS -->
-   <link rel="stylesheet" href="./static/css/versions.css">
+   <link rel="stylesheet" href="{% static 'css/versions.css' %}">
    <!-- Responsive CSS -->
-   <link rel="stylesheet" href="./static/css/responsive.css">
+   <link rel="stylesheet" href="{% static 'css/responsive.css' %}">
    <!-- Custom CSS -->
-   <link rel="stylesheet" href="./static/css/custom.css">
+   <link rel="stylesheet" href="{% static 'css/custom.css' %}">
    <!-- Modernizer for Portfolio -->
-   <script src="./static/js/modernizer.js"></script>
+   <script src="{% static 'js/modernizer.js' %}"></script>
    <!-- [if lt IE 9] -->
    </head>
    <body class="clinic_version">
@@ -38,7 +38,7 @@
       </div>
       <!-- END LOADER -->
       <header>
-         <div class="header-top wow fadeIn">
+         <!-- <div class="header-top wow fadeIn">
             <div class="container" >
                <a class="navbar-brand" href="index.html"><img src="./static/images/images.png" alt="image"></a>
                <div class="right-header">
@@ -58,7 +58,7 @@
                   </div>
                </div>
             </div>
-         </div>
+         </div> -->
          <div class="header-bottom wow fadeIn">
             <div class="container">
                <nav class="main-menu">
@@ -70,11 +70,7 @@
                      <ul class="nav navbar-nav">
                         <li><a href="{% url 'Home_Page' %}">Home</a></li>
                         <li><a data-scroll href="#about">About us</a></li>
-                        <li><a data-scroll href="{% url 'Disease_prediction' %}">Services</a></li>
-                        <li><a data-scroll href="#doctors">Doctors</a></li>
-                        <li><a data-scroll href="#price">Help</a></li>
-<!--						<li><a data-scroll href="#testimonials">Testimonials</a></li>-->
-                        <!-- <li><a data-scroll href="#getintouch">Contact</a></li> -->
+                        <li><a data-scroll href="{% url 'prediction_page' %}">Predction</a></li>
                         <li><a data-scroll href="{% url 'login' %}">Login</a></li>
                         <li><a data-scroll href="{% url 'signup' %}">SignUp</a></li>
                      </ul>
@@ -170,9 +166,9 @@
      <!-- end copyrights -->
      <a href="#home" data-scroll class="dmtop global-radius"><i class="fa fa-angle-up"></i></a>
      <!-- all js files -->
-     <script src="./static/js/all.js"></script>
+     <script src="{% static 'js/all.js' %}"></script>
      <!-- all plugins -->
-     <script src="./static/js/custom.js"></script>
+     <script src="{% static 'js/custom.js' %}"></script>
      <!-- map -->
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCNUPWkb4Cjd7Wxo-T4uoUldFjoiUA1fJc&callback=myMap"></script>
   </body>
