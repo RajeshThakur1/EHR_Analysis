@@ -12,6 +12,7 @@ def read_params(config_path):
 
 def get_data(config_path):
     config = read_params(config_path)
+    #config['base']['project']
     patient_raw_datapath = config['data_source']["s3_bucket_patient"]
     patient_df = pd.read_csv(patient_raw_datapath, sep=',', encoding='utf-8')
     dignosis_raw_datapath = config['data_source']["s3_bucket_diagnosis"]

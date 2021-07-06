@@ -31,6 +31,7 @@ estimators:
       max_depth: 1
       criterion: gini
 
+
 model_dir: saved_model
 
 reports:
@@ -38,6 +39,3 @@ reports:
   scores: report/scores.json
 
 webapp_model_dir: prediction_service/model/model.joblib
-
-
-

@@ -19,8 +19,8 @@ stages:
       md5: 67d1ce9b7a40e692297396f576bb9379
       size: 3281646
     - path: src/get_data.py
-      md5: 40e0263cd56b408459c57eadd757b05a
-      size: 1506
+      md5: e611986234067000ce2678f32d983b55
+      size: 1537
     - path: src/load_data.py
       md5: 91c6a40dea839cf9964b759fcaee65c8
       size: 1308

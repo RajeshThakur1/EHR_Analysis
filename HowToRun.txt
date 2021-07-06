@@ -1,0 +1,15 @@
+Run template.py   --- to create the structure of FW
+params.yaml
+
+
+To Do:---
+
+1. We can take the data from any cloud service
+2. We can store the data in our DB
+
+
+
+To DO:
+--------
+1. we have to ristrict the user to pass anything
+2.
